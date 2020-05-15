@@ -20,10 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="effect.cpp" />
+    <ClCompile Include="keycheck.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="effect.h" />
+    <ClInclude Include="keycheck.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
