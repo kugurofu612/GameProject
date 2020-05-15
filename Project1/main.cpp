@@ -199,36 +199,53 @@ void GameMain(void)
 	if (CheckHitKey(KEY_INPUT_UP))
 	{
 		playerPos.y -= 4;
-		//if ((mapPos.y + playerPos.y) < (SCROLL_Y_MIN))
-		//{
-		//	mapPos.y += 4;
-		//}
+		if ((mapPos.y + playerPos.y) < (SCROLL_Y_MIN))
+		{
+			mapPos.y += 4;
+		}
 	}
 	if (CheckHitKey(KEY_INPUT_DOWN))
 	{
 		playerPos.y += 4;
-	/*	if ((mapPos.y + playerPos.y) > (SCROLL_Y_MAX))
+		if ((mapPos.y + playerPos.y) > (SCROLL_Y_MAX))
 		{
 			mapPos.y -= 4;
-		}*/
+		}
 	}
 	if (CheckHitKey(KEY_INPUT_LEFT))
 	{
 		playerPos.x -= 4;
-	/*	if ((mapPos.x + playerPos.x) < (SCROLL_X_MIN))
+		if ((mapPos.x + playerPos.x) < (SCROLL_X_MIN))
 		{
 			mapPos.x += 4;
-		}*/
+		}
 	}
 	if (CheckHitKey(KEY_INPUT_RIGHT))
 	{
 		playerPos.x += 4;
-	/*	if ((mapPos.x + playerPos.x) > (SCROLL_X_MAX))
+		if ((mapPos.x + playerPos.x) > (SCROLL_X_MAX))
 		{
 			mapPos.x -= 4;
-		}*/
+		}
 	}
 
+	// プレイヤーの移動制限
+	if (playerPos.x > CHIP_SIZE_X * MAP_X) playerPos.x = CHIP_SIZE_X * MAP_X;
+	if (playerPos.x < 0) playerPos.x = 0;
+	if (playerPos.y > CHIP_SIZE_Y * MAP_Y) playerPos.y = CHIP_SIZE_Y * MAP_Y;
+	if (playerPos.y < 0) playerPos.y = 0;
+
+	// マップ操作
+	if (CheckHitKey(KEY_INPUT_W)) mapPos.y += 4;
+	if (CheckHitKey(KEY_INPUT_S)) mapPos.y -= 4;
+	if (CheckHitKey(KEY_INPUT_A)) mapPos.x += 4;
+	if (CheckHitKey(KEY_INPUT_D)) mapPos.x -= 4;
+
+	// マップの移動制限
+	if (mapPos.x < SCREEN_SIZE_X - CHIP_SIZE_X * MAP_X) mapPos.x = SCREEN_SIZE_X - CHIP_SIZE_X * MAP_X;
+	if (mapPos.x > 0) mapPos.x = 0;
+	if (mapPos.y < SCREEN_SIZE_Y - CHIP_SIZE_Y * MAP_Y) mapPos.y = SCREEN_SIZE_Y - CHIP_SIZE_Y * MAP_Y;
+	if (mapPos.y > 0) mapPos.y = 0;
 
 	testCnt++;
 
@@ -240,11 +257,26 @@ void GameDraw(void)
 {
 	DrawFormatString(0, 0, GetColor(255, 255, 255), "GameCounter = %d", sceneCounter++);  //gameCounterはｹﾞｰﾑﾙｰﾌﾟ中でｶｳﾝﾄさせてもOK
 	DrawFormatString(50, 50, GetColor(255, 255, 255), "Test = %d", testCnt);
+
 	DrawFormatString(20, 20, GetColor(255, 255, 255), "playerPos = %d : %d", playerPos.x, playerPos.y);
 
-	DrawBox(100, 100, 700, 500, GetColor(255, 0, 0), true);
+	//DrawBox(100, 100, 700, 500, GetColor(255, 0, 0), true);
+	for (int x = 0; x < MAP_X; x++)
+	{
+		for (int y = 0; y < MAP_Y; y++)
+		{
+			DrawBox(CHIP_SIZE_X * x + mapPos.x, CHIP_SIZE_Y * y + mapPos.y,
+				CHIP_SIZE_X * (x + 1) + mapPos.x, CHIP_SIZE_Y * (y + 1) + mapPos.y,
+				GetColor(128, 128, 128), false);
 
-	DrawCircle(playerPos.x, playerPos.y, 16, GetColor(255, 255, 255), true);
+			// 画面にマスの番号を表示する
+			DrawFormatString(CHIP_SIZE_X * x + mapPos.x, CHIP_SIZE_Y * y + mapPos.y,
+				GetColor(0, 128, 0), "%03X", x + y * MAP_X);				// %とXの間に0と桁数を入れるとその桁数に合わせるために数字の頭に0が追加される
+		}
+	}
+
+	DrawCircle(playerPos.x + mapPos.x, playerPos.y + mapPos.y, 16, GetColor(255, 255, 255), true);
+	DrawBox(100, 100, 700, 500, GetColor(255, 255, 255), false);
 
 	if (pauseFlag == true)
 	{
