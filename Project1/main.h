@@ -24,9 +24,41 @@ enum SCENE_ID {
 	SCENE_ID_GAMEOVER			// ゲームオーバーシーン
 };
 
+// 構造体
+//-----------------------
 struct XY {
 	int x;
 	int y;
+};
+
+enum CHARACTER_TYPE {
+	CHARACTER_PLAYER,
+	CHARACTER_ENEMY,
+	CHARACTER_SHOT,
+	CHARACTER_MAX
+};
+
+// 方向制御
+enum DIR {
+	DIR_UP,
+	DIR_RIGHT,
+	DIR_DOWN,
+	DIR_LEFT,
+	DIR_MAX
+};
+
+struct CHARACTER {
+	int charType;			// キャラクタの種類
+	DIR moveDir;			// キャラクタの向き
+	XY pos;					// キャラクタの地図上の座標
+	XY offsetSize;			// キャラクタのオフセットサイズ
+	XY size;				// キャラクタ画像のサイズ
+	int moveSpeed;			// キャラクタの移動スピード
+	int life;				// キャラクタの体力
+	int lifeMax;			// キャラクタの体力最大値
+	int animCnt;			// キャラクタのアニメーションカウンタ
+	int point;				// キャラクタのポイント
+	bool Flag;				// キャラクタのフラグ
 };
 
 // ﾌﾟﾛﾄﾀｲﾌﾟ宣言

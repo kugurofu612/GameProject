@@ -1,1 +1,5 @@
-﻿  Project1.vcxproj -> C:\Users\xqbbc\Desktop\Git\Test\GameProject\Project1\Debug\Project1.exe
+﻿  main.cpp
+c:\users\xqbbc\desktop\git\test\gameproject\project1\main.cpp(130): warning C4305: 'return': 'int' から 'bool' へ切り詰めます。
+  player.cpp
+  コードを生成中...
+  Project1.vcxproj -> C:\Users\xqbbc\Desktop\Git\Test\GameProject\Project1\Debug\Project1.exe

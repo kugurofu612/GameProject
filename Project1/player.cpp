@@ -5,7 +5,7 @@
 // 変数
 XY index;
 
-//CHARACTER player1;			// プレイヤーの情報管理用
+CHARACTER player1;			// プレイヤーの情報管理用
 int playerImage[16];		// プレイヤーの画像情報格納領域
 int damageTime;
 
