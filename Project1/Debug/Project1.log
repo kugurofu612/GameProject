@@ -1,5 +1,10 @@
-﻿  main.cpp
-c:\users\xqbbc\desktop\git\test\gameproject\project1\main.cpp(130): warning C4305: 'return': 'int' から 'bool' へ切り詰めます。
-  player.cpp
+﻿  player.cpp
+  stage.cpp
+c:\users\xqbbc\desktop\git\test\gameproject\project1\stage.h(9): warning C4005: 'MAP_X': マクロが再定義されました。
+  c:\users\xqbbc\desktop\git\test\gameproject\project1\main.h(10): note: 'MAP_X' の以前の定義を確認してください
+c:\users\xqbbc\desktop\git\test\gameproject\project1\stage.h(10): warning C4005: 'MAP_Y': マクロが再定義されました。
+  c:\users\xqbbc\desktop\git\test\gameproject\project1\main.h(11): note: 'MAP_Y' の以前の定義を確認してください
   コードを生成中...
-  Project1.vcxproj -> C:\Users\xqbbc\Desktop\Git\Test\GameProject\Project1\Debug\Project1.exe
+stage.obj : error LNK2005: "struct XY mapPos" (?mapPos@@3UXY@@A) は既に main.obj で定義されています。
+stage.obj : error LNK2019: 未解決の外部シンボル "void __cdecl SetMapData(enum STAGE_ID)" (?SetMapData@@YAXW4STAGE_ID@@@Z) が関数 "void __cdecl StageSystemInit(void)" (?StageSystemInit@@YAXXZ) で参照されました。
+C:\Users\xqbbc\Desktop\Git\Test\GameProject\Project1\Debug\Project1.exe : fatal error LNK1120: 1 件の未解決の外部参照
