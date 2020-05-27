@@ -1,10 +1,27 @@
 ﻿  player.cpp
-  stage.cpp
-c:\users\xqbbc\desktop\git\test\gameproject\project1\stage.h(9): warning C4005: 'MAP_X': マクロが再定義されました。
-  c:\users\xqbbc\desktop\git\test\gameproject\project1\main.h(10): note: 'MAP_X' の以前の定義を確認してください
-c:\users\xqbbc\desktop\git\test\gameproject\project1\stage.h(10): warning C4005: 'MAP_Y': マクロが再定義されました。
-  c:\users\xqbbc\desktop\git\test\gameproject\project1\main.h(11): note: 'MAP_Y' の以前の定義を確認してください
-  コードを生成中...
-stage.obj : error LNK2005: "struct XY mapPos" (?mapPos@@3UXY@@A) は既に main.obj で定義されています。
-stage.obj : error LNK2019: 未解決の外部シンボル "void __cdecl SetMapData(enum STAGE_ID)" (?SetMapData@@YAXW4STAGE_ID@@@Z) が関数 "void __cdecl StageSystemInit(void)" (?StageSystemInit@@YAXXZ) で参照されました。
-C:\Users\xqbbc\Desktop\Git\Test\GameProject\Project1\Debug\Project1.exe : fatal error LNK1120: 1 件の未解決の外部参照
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(57): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(59): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(67): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(69): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(77): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(79): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(87): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(89): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(121): error C3861: 'IsPass': 識別子が見つかりませんでした
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(130): error C3861: 'IsPass': 識別子が見つかりませんでした
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(139): error C3861: 'IsPass': 識別子が見つかりませんでした
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(148): error C3861: 'IsPass': 識別子が見つかりませんでした
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(172): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(174): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(176): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(178): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(180): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(182): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(184): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(186): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(190): error C3861: 'AddCharaOrder': 識別子が見つかりませんでした
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(201): error C3861: 'PosToIndex': 識別子が見つかりませんでした
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(207): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(208): error C2065: 'mapPos': 定義されていない識別子です。
+c:\users\xqbbc\desktop\git\test\gameproject\project1\player.cpp(207): error C2660: 'DxLib::DrawGraph': 関数に 3 個の引数を指定できません。
+  c:\users\xqbbc\desktop\プロジェクトに追加すべきファイル_vc用\dxlib.h(2666): note: 'DxLib::DrawGraph' の宣言を確認してください

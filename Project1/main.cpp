@@ -8,6 +8,7 @@
 #include "keycheck.h"
 #include "effect.h"
 #include "player.h"
+#include "stage.h"
 
 // •Ï”
 int sceneCounter;
