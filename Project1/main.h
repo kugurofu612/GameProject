@@ -1,7 +1,3 @@
-// ----------------
-// BaseProject
-//  by Nakagami
-// ----------------
 // #pragma once
 
 // ’è‹`

@@ -1,7 +1,4 @@
 // -----------------------------
-// keycheck.cpp
-//  2019.09.26  by Nakagami
-// -----------------------------
 
 #include "DxLib.h"		//DxLib×²ÌÞ×Ø‚ðŽg—p‚·‚é
 #include "keycheck.h"

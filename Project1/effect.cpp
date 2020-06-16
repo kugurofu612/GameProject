@@ -1,9 +1,6 @@
 // ----------------
-// effect.cpp
-//  2019.10.01  by Nakagami
-// ----------------
 
-#include "DxLib.h"		//DxLibﾗｲﾌﾞﾗﾘを使用する
+#include<DxLib.h>		//DxLibﾗｲﾌﾞﾗﾘを使用する
 #include "effect.h"
 
 // 一時停止処理用

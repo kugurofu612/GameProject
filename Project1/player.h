@@ -4,3 +4,4 @@
 // ÌßÛÄÀ²ÌßéŒ¾
 //---------------------
 void PlayerSystemInit(void);			// ƒvƒŒƒCƒ„[î•ñ‚Ì‰Šú‰»ˆ—
+void PlayerGameInit(void);
